@@ -1,7 +1,10 @@
-const dotenv = require('dotenv');
-dotenv.config();
+// const dotenv = require('dotenv');
+// dotenv.config();
+// const OpenAI = require('openai');
 
-const OpenAI = require('openai');
+import dotenv from 'dotenv';
+import OpenAI from 'openai';
+dotenv.config();
 
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY
@@ -214,7 +217,7 @@ async function test() {
               );
             console.log(threadMessages.data[0].content);
         }
-    }, 2000); // 2초마다 반복 실행
+    }, 1500); // 반복 실행
 
 }
 
